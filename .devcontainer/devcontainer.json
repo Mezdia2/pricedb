@@ -1,0 +1,10 @@
+{
+  "name": "Terminal Only (RTL)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "containerEnv": { "LANG": "C.UTF-8" },
+  "forwardPorts": [7681],
+  "portsAttributes": {
+    "7681": { "label": "Terminal", "onAutoForward": "openBrowser" }
+  },
+  "postStartCommand": "setsid nohup bash .devcontainer/start-terminal.sh > /tmp/terminal.log 2>&1 < /dev/null &"
+}
